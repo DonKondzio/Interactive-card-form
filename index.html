@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interective card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="dist/img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <script src="dist/js/app.min.js" defer></script>
+    <link rel="stylesheet" href="dist/css/style.min.css" />
+  </head>
+  <body>
+    <div class="background-gradient">
+      <div class="wrapper-cards">
+        <div class="card-back-container">
+          <img
+            class="card-back"
+            src="dist/img/bg-card-back.png"
+            alt="back of the card"
+          />
+          <p class="cvc">000</p>
+        </div>
+
+        <div class="card-front-container">
+          <img
+            class="card-front"
+            src="dist/img/bg-card-front.png"
+            alt="front of the card"
+          />
+
+          <div class="card-front-content">
+            <img
+              class="card-logo"
+              src="dist/img/card-logo.svg"
+              alt="card logo"
+            />
+            <p class="card-code-number">0000 0000 0000 0000</p>
+            <div class="card-bottom-info">
+              <p class="name">Jane appleseed</p>
+              <p class="date">
+                <span class="month">00</span>/<span class="year">00</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="white-container">
+      <div class="wrapper-form">
+        <form class="form active">
+          <label class="label">cardholder name</label>
+          <input
+            class="input input-name"
+            type="text"
+            placeholder="e.g. Jane Appleseed"
+            maxlength="100"
+          />
+          <span class="span span-name">Can't be blank</span>
+          <label class="label">card number</label>
+          <input
+            class="input input-number"
+            type="text"
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="19"
+          />
+          <span class="span span-number">Can't be blank</span>
+
+          <div class="form-bottom">
+            <div class="form-bottom-left">
+              <label class="label">exp. date (mm,yy)</label>
+              <div class="form-bottom-left-inputs">
+                <input
+                  class="input input-month"
+                  type="number"
+                  placeholder="MM"
+                  min="0"
+                  max="12"
+                />
+                <input
+                  class="input input-year"
+                  type="number"
+                  placeholder="YY"
+                  min="0"
+                  max="40"
+                />
+              </div>
+              <span class="span span-date">Can't be blank</span>
+            </div>
+            <div class="form-bottom-right">
+              <label class="label">cvc</label>
+              <input
+                class="input input-cvc"
+                type="number"
+                placeholder="e.g. 123"
+                min="0"
+                max="999"
+              />
+              <span class="span span-cvc">Can't be blank</span>
+            </div>
+          </div>
+          <button class="form-btn">Confirm</button>
+        </form>
+
+        <div class="complete">
+          <img class="complete-icon" src="dist/img/icon-complete.svg" alt="" />
+          <p class="complete-thanks">Thank you!</p>
+          <p class="complete-info">We've added your card details</p>
+          <button class="continue-btn">Continue</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
